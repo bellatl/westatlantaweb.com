@@ -729,7 +729,11 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://www.westatlantaweb.com/formmail.php" method="post" role="form" class="">
+              <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
+              <input type="hidden" name="recipients" value="nathan@westatlantaweb.com" />
+              <input type="hidden" name="required" value="EmailAddr:Your email address,FullName:Your name" />
+              <input type="hidden" name="subject" value="Submission – Contact form on westatlataweb.com" />
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>

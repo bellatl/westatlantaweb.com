@@ -714,7 +714,10 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p><a href="mailto:nathan@westatlantaweb.com">nathan@westatlantaweb.com</a></p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Launch demo modal
+                </button>
+                <!--<p><a href="mailto:nathan@westatlantaweb.com">nathan@westatlantaweb.com</a></p>-->
               </div>
 
               <div class="phone">
@@ -760,7 +763,7 @@
                     response => response.json()
                 ).then((html) => {
                   // you can put any JS code here
-                  alert('success')
+                  alert('Thank you for your email! I will contact you shortly!')
                 });
               });
             </script>
@@ -773,6 +776,44 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+  <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm" id="sheetdb-form" method="post" role="form" class="php-email-form">
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" name="data[First Name]" class="form-control" id="first_name" placeholder="Your First Name" required>
+      </div>
+      <div class="col-md-6 form-group mt-3 mt-md-0">
+        <input type="text" class="form-control" name="data[Last Name]" id="last_name" placeholder="Your Last Name" required>
+      </div>
+    </div>
+    <div class="form-group mt-3">
+      <input type="email" class="form-control" name="data[Email]" id="email" placeholder="Your Email Address" required>
+    </div>
+    <div class="form-group mt-3">
+      <input type="text" class="form-control" name="data[Subject]" id="subject" placeholder="Subject" required>
+    </div>
+    <div class="form-group mt-3">
+      <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
+    </div>
+    <div class="text-center"><button type="submit">Send Message</button></div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <button type="button" class="btn btn-primary">Save changes</button>
+</div>
+</div>
+</div>
+</div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

@@ -371,7 +371,7 @@
               <h4>Interactive Marketing Manager</h4>
               <h5>October 2015 - May 2020</h5>
               <p><em><a href="https://web.archive.org/web/20200506002810/https://www.northside.com/" target="_blank">Northside Hospital Inc.</a> Marketing & Communications Department; Atlanta, GA </em></p>
-              <p>Web Designer/Developer formerly responsible for the production and creation of the Northside Hospital network of physician practice websites and management of northside.com. Measured and reported SEO and keyword performance of a family of individual websites. Optimized websites against the latest trends in design, SEO/SEM, and user experience. Effective technical lead, in depth at completing web and enterprise team projects from conception to completion. A trusted colleague and associate, referred to for complex situations in digital architecture. Direct impact in digital growth and progress for Northside Hospital and northside.com. Samples of over 60 individual physician sites: <a href="https://web.archive.org/web/20200506002810/https://www.northside.com/" target="_blank">northside.com</a>, <a href="https://web.archive.org/web/20170725114946/http://northsideheart.com/" target="_blank">northsideheart.com</a>, <a href="https://web.archive.org/web/20180307023420/http://pnfm.com/" target="_blank">pnfm.com</a>, <a href="https://alpharettafootandankle.com" target="_blank">alpharettafootandankle.com</a>, <a href="https://web.archive.org/web/20181230150641/https://arthritisandtotaljoint.com/" target="_blank">arthritisandtotaljoint.com</a></p>
+              <p>Web Designer/Developer formerly responsible for the production and creation of the Northside Hospital network of physician practice websites and management of northside.com. Measured and reported SEO and keyword performance of a family of individual websites. Optimized websites against the latest trends in design, SEO/SEM, and user experience. Effective technical lead, in depth at completing web and enterprise team projects from conception to completion. A trusted colleague and associate, referred to for complex situations in digital architecture. Direct impact in digital growth and progress for Northside Hospital and northside.com. Samples of over 60 individual physician sites: <a href="https://web.archive.org/web/20200506002810/https://www.northside.com/" target="_blank">northside.com</a>, <a href="https://web.archive.org/web/20170725114946/http://northsideheart.com/" target="_blank">northsideheart.com</a>, <a href="https://web.archive.org/web/20180307023420/http://pnfm.com/" target="_blank">pnfm.com</a>, <a href="https://web.archive.org/web/20171207075317/http://www.alpharettafootandankle.com/" target="_blank">alpharettafootandankle.com</a>, <a href="https://web.archive.org/web/20181230150641/https://arthritisandtotaljoint.com/" target="_blank">arthritisandtotaljoint.com</a></p>
             </div>
             <div class="resume-item">
               <h4>Interactive Marketing Manager</h4>
@@ -381,7 +381,7 @@
                 <li>Managed the position of the creative and development of Kennesaw State Univ. Auxiliary Services websites, which included:</li>
                   <ul>
                     <li>University Dining</li>
-                    <li>Studnent Health Services</li>
+                    <li>Student Health Services</li>
                     <li>Card Services and KCash</li>
                     <li>Campus Postal Services</li>
                     <li>Parking &amp; Transportation Services</li>
@@ -880,7 +880,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-  <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm" id="sheetdb-form" method="post" role="form" class="php-email-form">
+  <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm" id="sheetdb-form2" method="post" role="form" class="php-email-form">
     <div class="row">
       <div class="col-md-6 form-group">
         <input type="text" name="data[First Name]" class="form-control" id="first_name" placeholder="Your First Name" required>
@@ -901,6 +901,22 @@
     <be />
     <div class="text-center float-end"><button type="submit" class="btn btn-light">Send Message</button></div>
   </form>
+
+  <script>
+    var form = document.getElementById('sheetdb-form2');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form2")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        // you can put any JS code here
+        alert('Thank you for your email! I will contact you shortly!')
+      });
+    });
+  </script>
 </div>
 </div>
 </div>

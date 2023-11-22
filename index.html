@@ -857,7 +857,7 @@
                     response => response.json()
                 ).then((html) => {
                   // you can put any JS code here
-                  alert('Thank you for your email! I will contact you shortly!')
+                  alert('Thank you for your information! I will contact you shortly!')
                 });
               });
             </script>
@@ -899,13 +899,10 @@
       <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
     </div>
     <be />
-    <div class="text-center float-end"><button type="submit" class="btn btn-light">Send Message</button></div>
+    <div class="text-center float-end"><button id="123" type="submit" class="btn btn-light">Send Message</button></div>
   </form>
 
   <script>
-     $('#ContactModal').submit(function(e) {
-    e.preventDefault();
-    $('#IDModal').modal('hide');
       var form = document.getElementById('sheetdb-form2');
       form.addEventListener("submit", e => {
         e.preventDefault();
@@ -915,11 +912,15 @@
         }).then(
             response => response.json()
         ).then((html) => {
-          // you can put any JS code here
-          alert('Thank you for your email! I will contact you shortly!')
+          $('#123').submit(function(e) {
+                e.preventDefault();
+                // Coding
+                $('#ContactModal').modal('hide');
+                return false;
+            });
+          alert('Thank you for your information! I will contact you shortly!')
         });
       });
-    });
   </script>
 </div>
 </div>

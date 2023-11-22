@@ -872,7 +872,7 @@
   </main><!-- End #main -->
 
   <!-- Modal -->
-  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -903,20 +903,22 @@
   </form>
 
   <script>
-    var form = document.getElementById('sheetdb-form2');
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      fetch(form.action, {
-          method : "POST",
-          body: new FormData(document.getElementById("sheetdb-form2")),
-      }).then(
-          response => response.json()
-      ).then((html) => {
-        // you can put any JS code here
-        alert('Thank you for your email! I will contact you shortly!')
+     $('#ContactModal').submit(function(e) {
+    e.preventDefault();
+    $('#IDModal').modal('hide');
+      var form = document.getElementById('sheetdb-form2');
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("sheetdb-form2")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+          // you can put any JS code here
+          alert('Thank you for your email! I will contact you shortly!')
+        });
       });
-      $('#Modal').modal('hide');
-    return false;
     });
   </script>
 </div>

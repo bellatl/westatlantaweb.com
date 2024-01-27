@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 permalink: pretty
+plugins:
+  - jekyll-seo-tag

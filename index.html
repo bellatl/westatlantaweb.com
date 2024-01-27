@@ -843,7 +843,8 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button id="123" type="submit" class="grecaptcha text-center" data-sitekey="reCAPTCHA_site_key" 
+                data-callback="onSubmit" data-action="submit">Send Message</button></div>
             </form>
 
             <script>
@@ -898,7 +899,7 @@
       <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
     </div>
     <be />
-    <div class="text-center float-end"><button id="123" type="submit" class="grecaptcha text-center" data-sitekey="reCAPTCHA_site_key" 
+    <div class="text-center float-end"><button id="456" type="submit" class="grecaptcha text-center" data-sitekey="reCAPTCHA_site_key" 
         data-callback="onSubmit" data-action="submit">Send Message</button></div>
   </form>
 
@@ -962,6 +963,11 @@
      document.getElementById("123").submit();
    }
  </script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("456").submit();
+      }
+    </script>
 
 </body>
 

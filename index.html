@@ -967,7 +967,19 @@
         document.getElementById("456").submit();
       }
     </script>
+<script>
+  $recaptchaSecret = '6LfUjx0pAAAAAP6ZjvYutXbAOE_XAqLvL56clWHs';
+$recaptchaResponse = $_POST['g-recaptcha-response'];
+$recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecret);
+$recaptchaResult = $recaptcha->verify($recaptchaResponse);
 
+if (!$recaptchaResult->isSuccess()) {
+    // reCaptcha validation failed, handle the error as needed
+    // For example: $errors[] = 'reCaptcha verification failed.';
+} else {
+    // reCaptcha validation succeeded, proceed with form processing
+}
+</script>
 </body>
 
 </html>

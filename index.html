@@ -842,7 +842,7 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="text-center"><button id="123" type="submit" class="grecaptcha text-center" data-sitekey="reCAPTCHA_site_key" 
+              <div class="text-center"><button id="123" type="submit" class="grecaptcha text-center" data-sitekey="6LfUjx0pAAAAAOxHqmFfxmIB-O5fgSGCtGPoFHgs" 
                 data-callback="onSubmit" data-action="submit">Send Message</button></div>
             </form>
 
@@ -898,7 +898,7 @@
       <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
     </div>
     <be />
-    <div class="text-center float-end"><button id="456" type="submit" class="grecaptcha text-center" data-sitekey="reCAPTCHA_site_key" 
+    <div class="text-center float-end"><button id="456" type="submit" class="grecaptcha text-center" data-sitekey="6LfUjx0pAAAAAOxHqmFfxmIB-O5fgSGCtGPoFHgs" 
         data-callback="onSubmit" data-action="submit">Send Message</button></div>
   </form>
 
@@ -952,23 +952,21 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Recaptcha -->
-   <script>
+<!-- Recaptcha -->
+<script>
    function onSubmit(token) {
      document.getElementById("123").submit();
    }
- </script>
-    <script>
+</script>
+<script>
       function onSubmit(token) {
         document.getElementById("456").submit();
       }
-    </script>
+</script>
 <script>
-  $recaptchaSecret = '6LfUjx0pAAAAAP6ZjvYutXbAOE_XAqLvL56clWHs';
+$recaptchaSecret = '6LfUjx0pAAAAAP6ZjvYutXbAOE_XAqLvL56clWHs';
 $recaptchaResponse = $_POST['g-recaptcha-response'];
 $recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecret);
 $recaptchaResult = $recaptcha->verify($recaptchaResponse);
@@ -981,5 +979,4 @@ if (!$recaptchaResult->isSuccess()) {
 }
 </script>
 </body>
-
 </html>

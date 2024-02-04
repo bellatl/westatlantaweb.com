@@ -2,3 +2,18 @@ theme: jekyll-theme-cayman
 permalink: pretty
 plugins:
   - jekyll-seo-tag
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+title:
+tagline:
+description: Professional Website of Nathan Bell - Web Designer/Web Developer
+url: https://westatlantaweb.com
+author: Nathan Bell
+logo:
+social:
+  name: Nathan Bell
+  links:
+    - https://www.linkedin.com/in/bellatl
+timezone: America/New_York

@@ -13,6 +13,7 @@ layout: compress
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NFL4HBW');</script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <link href="https://ik.imagekit.io/8b7adhsrj/bell_DLr2yQdaPa.png?updatedAt=1693967807885" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -825,7 +826,7 @@ layout: compress
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="https://formspree.io/f/xdoqedae" id="Contact-Form" method="post" role="form" class="php-email-form">
+            <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm" id="sheetdb-form" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="data[First Name]" class="form-control" id="first_name" placeholder="Your First Name" required>
@@ -843,16 +844,17 @@ layout: compress
               <div class="form-group mt-3">
                 <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="text-center"><button id="ContactForm" type="submit">Send Message</button></div>
+              <div class="text-center"><button id="123" type="submit" class="grecaptcha text-center" data-sitekey="6LfUjx0pAAAAAOxHqmFfxmIB-O5fgSGCtGPoFHgs" 
+                data-callback="onSubmit" data-action="submit">Send Message</button></div>
             </form>
 
             <script>
-              var form = document.getElementById('Contact-Form');
+              var form = document.getElementById('sheetdb-form');
               form.addEventListener("submit", e => {
                 e.preventDefault();
                 fetch(form.action, {
                     method : "POST",
-                    body: new FormData(document.getElementById("Contact-Form")),
+                    body: new FormData(document.getElementById("sheetdb-form")),
                 }).then(
                     response => response.json()
                 ).then((html) => {
@@ -870,7 +872,7 @@ layout: compress
 
   </main><!-- End #main -->
 
-  <!-- Contact Popup Modal -->
+  <!-- Modal -->
   <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -879,7 +881,7 @@ layout: compress
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-  <form action="https://formspree.io/f/mleqjlgl" id="Contact-Popup" method="post" role="form" class="php-email-form">
+  <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm" id="sheetdb-form2" method="post" role="form" class="php-email-form">
     <div class="row">
       <div class="col-md-6 form-group">
         <input type="text" name="data[First Name]" class="form-control" id="first_name" placeholder="Your First Name" required>
@@ -898,16 +900,17 @@ layout: compress
       <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
     </div>
     <be />
-    <div class="text-center float-end"><button id="ContactPopup" type="submit">Send Message</button></div>
+    <div class="text-center float-end"><button id="456" type="submit" class="grecaptcha text-center" data-sitekey="6LfUjx0pAAAAAOxHqmFfxmIB-O5fgSGCtGPoFHgs" 
+        data-callback="onSubmit" data-action="submit">Send Message</button></div>
   </form>
 
   <script>
-      var form = document.getElementById('Contact-Popup');
+      var form = document.getElementById('sheetdb-form2');
       form.addEventListener("submit", e => {
         e.preventDefault();
         fetch(form.action, {
             method : "POST",
-            body: new FormData(document.getElementById("Contact-Popup")),
+            body: new FormData(document.getElementById("sheetdb-form2")),
         }).then(
             response => response.json()
         ).then((html) => {
@@ -953,5 +956,29 @@ layout: compress
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<!-- Recaptcha -->
+<script>
+   function onSubmit(token) {
+     document.getElementById("123").submit();
+   }
+</script>
+<script>
+      function onSubmit(token) {
+        document.getElementById("456").submit();
+      }
+</script>
+<script>
+$recaptchaSecret = '6LfUjx0pAAAAAP6ZjvYutXbAOE_XAqLvL56clWHs';
+$recaptchaResponse = $_POST['g-recaptcha-response'];
+$recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecret);
+$recaptchaResult = $recaptcha->verify($recaptchaResponse);
+
+if (!$recaptchaResult->isSuccess()) {
+    // reCaptcha validation failed, handle the error as needed
+    // For example: $errors[] = 'reCaptcha verification failed.';
+} else {
+    // reCaptcha validation succeeded, proceed with form processing
+}
+</script>
 </body>
 </html>

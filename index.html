@@ -702,7 +702,7 @@ layout: compress
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="https://formcarry.com/s/An6XN8tzFot" id="sheetdb-form" method="POST" role="form" class="php-email-form" enctype="multipart/form-data">
+            <form action="https://formcarry.com/s/An6XN8tzFot" id="contact-form" method="POST" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="data[First Name]" class="form-control" id="first_name" placeholder="Your First Name" required>
@@ -720,23 +720,8 @@ layout: compress
               <div class="form-group mt-3">
                 <textarea class="form-control" name="data[Message]" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="text-center"><button id="123" type="submit" class="text-center" data-action="submit">Send Message</button></div>
+              <div class="text-center"><button id="contact-form-button" type="submit" class="text-center" data-action="submit">Send Message</button></div>
             </form>
-
-            <script>
-              var form = document.getElementById('sheetdb-form');
-              form.addEventListener("submit", e => {
-                e.preventDefault();
-                fetch(form.action, {
-                    method : "POST",
-                    body: new FormData(document.getElementById("sheetdb-form")),
-                }).then(
-                    response => response.json()
-                ).then((html) => {
-                  window.location.href = '/thank-you';
-                });
-              });
-            </script>
 
           </div>
 

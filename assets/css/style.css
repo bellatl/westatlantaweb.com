@@ -31,12 +31,6 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-.site-theme-text {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  color: #0563bb;
-}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -833,6 +827,13 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+p#site-theme-text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0563bb;
+}
+
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
@@ -882,8 +883,9 @@ section {
 
 .services .icon-box p {
   line-height: 24px;
-  font-size: 24px;
+  font-size: 14px;
   margin-bottom: 0;
+  padding-top: 15px;
 }
 
 .services .icon-box:hover {

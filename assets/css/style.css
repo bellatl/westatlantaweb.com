@@ -31,6 +31,12 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+.site-theme-text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #0563bb;
+}
 
 /*--------------------------------------------------------------
 # Back to top button

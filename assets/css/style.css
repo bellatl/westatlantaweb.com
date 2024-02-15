@@ -284,7 +284,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https: //ik.imagekit.io/8b7adhsrj/hero_oT6vzDyrT.webp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1707956373344") top right no-repeat;
+  background: url("https: //ik.imagekit.io/8b7adhsrj/hero_oT6vzDyrT.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1707956373344") top right no-repeat;
   background-size: cover;
   position: relative;
 }

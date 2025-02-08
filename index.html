@@ -788,7 +788,7 @@ layout: compress
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="https://formcarry.com/s/An6XN8tzFot" id="contact-form" method="POST" enctype="multipart/form-data">
+            <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm?sheet=contact-form" id="contact-form" method="POST" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="data[First Name]" class="form-control" id="first_name_contact_form" placeholder="Your First Name" required>
@@ -827,7 +827,7 @@ layout: compress
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-  <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm" id="sheetdb-form2" method="post" role="form" class="php-email-form">
+  <form action="https://sheetdb.io/api/v1/0isxrdtgbn6bm?sheet=modal" id="web-modal" method="post" role="form" class="php-email-form">
     <div class="row">
       <div class="col-md-6 form-group">
         <input type="text" name="data[First Name]" class="form-control" id="first_name_contact_modal" placeholder="Your First Name" required>
@@ -851,12 +851,12 @@ layout: compress
   </form>
 
   <script>
-      var form = document.getElementById('sheetdb-form2');
+      var form = document.getElementById('web-modal');
       form.addEventListener("submit", e => {
         e.preventDefault();
         fetch(form.action, {
             method : "POST",
-            body: new FormData(document.getElementById("sheetdb-form2")),
+            body: new FormData(document.getElementById("web-modal")),
         }).then(
             response => response.json()
         ).then((html) => {
